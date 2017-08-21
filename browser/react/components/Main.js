@@ -12,7 +12,7 @@ export default class Main extends Component {
     super(props);
     this.state = {
       // albums: [],
-      selectedAlbum: {}
+      // selectedAlbum: {}
     };
     // this.selectAlbum = this.selectAlbum.bind(this);
     this.deselectAlbum = this.deselectAlbum.bind(this);
@@ -47,7 +47,8 @@ export default class Main extends Component {
         <HashRouter>
         <div className="col-xs-10">
         <Route exact path= '/' component={AllAlbums}/>
-        <Route path= '/albums' component={AllAlbums}/>
+        <Route exact path= '/albums' component={AllAlbums}/>
+        <Route path='/albums/:albumId' component={SingleAlbum}/>
         </div>
         </HashRouter>
         <Player />
